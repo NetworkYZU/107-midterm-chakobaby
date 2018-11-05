@@ -37,15 +37,18 @@ public class GetImageServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("image/png");
         String defaultImageString="https://upload.wikimedia.org/wikipedia/commons/9/9a/PNG_transparency_demonstration_2.png";
+        request.getParameter("image1");
+        request.getParameter("image2");
+        request.getParameter("image3");
+        
         /*
         從 request 抓出 parameter id
         以這個 id 從 session 裡面找出對應的 image 網址
         注意，如果是 null，要用 defaultImageString
         利用 IOUtils 的 copy 函式，將 image 輸出
-        
         你會利用到 URL 類別的建構子以及 URL 類別的 openStream 函式
         來開啟影像的 InputStream
-        */
+         */
        
     }
 
