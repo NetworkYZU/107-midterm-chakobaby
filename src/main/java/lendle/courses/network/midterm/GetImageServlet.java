@@ -40,7 +40,7 @@ public class GetImageServlet extends HttpServlet {
         request.getParameter("image1");
         request.getParameter("image2");
         request.getParameter("image3");
-        
+        /*123
         /*
         從 request 抓出 parameter id
         以這個 id 從 session 裡面找出對應的 image 網址
