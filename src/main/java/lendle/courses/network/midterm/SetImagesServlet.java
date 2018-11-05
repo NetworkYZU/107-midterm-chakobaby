@@ -35,20 +35,24 @@ public class SetImagesServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
         String parameter
+        
+                
                 /*
                 從 request parameter 讀出 image1, image2, image3
                 設定到 session 的 1, 2, 3 attribute
                 然後轉址到 index.jsp
                 */;
-        parameter = request.getParameter("image1");
-        parameter = request.getParameter("image2");
-        parameter = request.getParameter("image3");
-     
-        HttpSession s=request.getSession();
-        String Images = null;
-        s.setAttribute(Images, s);
+        String image1=request.getParameter("image1");
+        String image2=request.getParameter("image2");
+        String image3=request.getParameter("image3");
+        
+        HttpSession session=request.getSession();
+        
+        session.setAttribute("1",image1);
+        session.setAttribute("2",image2);
+        session.setAttribute("3",image3);
+        
         response.sendRedirect("index.jsp");
-    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
